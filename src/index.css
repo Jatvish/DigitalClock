@@ -1,0 +1,127 @@
+body {
+  background-image: url(assets/gintoki.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.clock-container {
+  backdrop-filter: blur();
+}
+
+.clock {
+  color: white;
+  font-size: 6rem;
+  font-weight: bold;
+  font-family: monospace;
+  text-shadow: 3px 3px 5px black;
+  text-align: center;
+}
+
+/* === NEW ADDITIONS BELOW === */
+
+/* Configure button in top-right */
+.config-wrapper {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.configure-btn {
+  background-color: rgba(255, 255, 255, 0.3);
+  border: none;
+  font-size: 1.5rem;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: black;
+  backdrop-filter: blur(4px);
+}
+
+.configure-btn:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Configure menu box */
+.config-menu {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 12px 16px;
+  margin-top: 10px;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(4px);
+  color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 200px;
+}
+
+.config-menu label {
+  font-size: 0.95rem;
+  gap: 5px;
+}
+
+/* Only keep column layout for labels that are NOT checkboxes */
+.config-menu label:not(.checkbox-label) {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Optional: background themes */
+.background-gintoki {
+  background-image: url(assets/gintoki.jpg);
+}
+
+.background-city {
+  background-image: url(assets/city.jpg);
+}
+
+.background-forest {
+  background-image: url(assets/forest.jpg);
+}
+
+.background-space {
+  background-image: url(assets/space.jpg);
+}
+
+/* Apply to all backgrounds for consistency */
+.background-gintoki,
+.background-city,
+.background-forest,
+.background-space {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  align-items: center;
+  transition: background-image 0.5s ease;
+}
+
+.config-menu label.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* spacing between checkbox and text */
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
