@@ -30,6 +30,12 @@ A stylish digital clock built with **React**, featuring:
 
 ---
 
+## 🔧 Deployent
+
+- **Link:** https://jatvish-digital-clock.vercel.app
+
+---
+
 ## 🚀 How to Run Locally
 
 ```bash
